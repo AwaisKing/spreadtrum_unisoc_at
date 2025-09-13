@@ -12,3 +12,5 @@ Enter diag mode with
 * Make sure Latest SPD / UNISOC Driver installed before operation.
 
 More Information :  https://www.youtube.com/@HadiK-IT?sub_confirmation=1
+
+(auto build)
