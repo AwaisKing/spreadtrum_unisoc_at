@@ -31,4 +31,10 @@ jobs:
 
     - name: List some files
       # working-directory: tdlib_source/example/android
-      run: dir /s /b
+      run: dir
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: '**/bin/*'
