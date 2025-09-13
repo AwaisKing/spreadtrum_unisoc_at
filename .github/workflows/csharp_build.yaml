@@ -29,6 +29,6 @@ jobs:
     - name: Build with Visual Studio MSBuild
       run: dotnet build "Unisoc AT.sln" --configuration Release /p:Platform="Any CPU" /p:PreferredToolArchitecture=x64 /p:GenerateResourceMSBuildArchitecture=x64 /p:UseSharedCompilation=false
 
-    - name: List some files 2
+    - name: List some files
       # working-directory: tdlib_source/example/android
-      run: find . -maxdepth 5
+      run: dir /s /b
