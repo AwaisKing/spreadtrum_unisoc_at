@@ -13,7 +13,8 @@ jobs:
     runs-on: windows-latest # Or ubuntu-latest, depending on your project's needs
 
     steps:
-    - uses: actions/checkout@v4 # Checkout the repository code
+    - name: Checkout repository
+      uses: actions/checkout@v4 # Checkout the repository code
 
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
@@ -21,10 +22,10 @@ jobs:
         dotnet-version: '9.x'
 
     - name: Restore dependencies
-      run: dotnet restore 'Unisoc AT.sln'
+      run: dotnet restore
 
     - name: Build solution
-      run: dotnet build 'Unisoc AT.sln' --configuration Release
+      run: dotnet build --configuration Release --no-restore
 
     - name: List some files 2
       # working-directory: tdlib_source/example/android
