@@ -22,12 +22,12 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore "Unisoc AT.sln"
+      run: dotnet restore
 
     # - name: Build solution
     #   run: dotnet build --configuration Release /p:Platform="Any CPU" /p:PreferredToolArchitecture=x64
     - name: Build with Visual Studio MSBuild
-      run: '"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" "Unisoc AT.sln" /p:Configuration=Release /p:Platform="Any CPU" /p:PreferredToolArchitecture=x64'
+      run: '"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" /p:Configuration=Release /p:Platform="Any CPU" /p:PreferredToolArchitecture=x64'
 
     - name: List some files 2
       # working-directory: tdlib_source/example/android
